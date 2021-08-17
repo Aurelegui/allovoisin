@@ -1,19 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types';
+import React from "react";
+import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 
-function Articles({}) {
-    return (
-        <div>
-            <h1>Mes articles</h1>
+const Articles = ({}) => {
+  return (
+    <div>
+      <Form.Group
+        bg="primary"
+        as={Col}
+        className="mb-3"
+        controlId="formAddArticle"
+      >
+        <Col md={7} sm={6} xs={12}>
             
-        </div>
-    )
-}
+        </Col>
+      </Form.Group>
+    </div>
+  );
+};
 
-Articles.propTypes = {
+Articles.propTypes = {};
 
-}
-
-export default Articles
+export default Articles;
