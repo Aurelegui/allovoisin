@@ -65,6 +65,7 @@ label {
 .buttonCenter {
     display: flex;
     margin:auto;
+    padding: 12px 35px;
 }
 
 .btn {
@@ -77,10 +78,14 @@ label {
     background: #cf6c4e;
 }
 
-.btn:disabled {
+.btn.disabled {
     background: #ff916fbd;
 }
 
 .bgColor {
     background: white;
+}
+
+.closeButton {
+  float: right;
 }

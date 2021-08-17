@@ -43,12 +43,12 @@ function AjoutForm({
       setTva(e.target.value);
     }
   };
-  
+
   // Calcul total price TTC
   if (tva) {
-    const totalPrice = (price / 100) * tva;
-    setTotal(price - totalPrice);
-    console.log(tva, price);
+    const totalReduc = (price / 100) * tva;
+    const total = price - totalReduc;
+      setTotal(parseFloat(total));
   }
   // Add Article onSubmit
   const addArticle = (e) => {
@@ -68,6 +68,7 @@ function AjoutForm({
       setPrice("");
       setTva("");
       setArticleName("");
+      setTotal("");
     }
   };
 
@@ -126,6 +127,7 @@ function AjoutForm({
             value={tva}
             type="text"
             placeholder="TVA en %"
+            maxLength={2}
           />
         </FloatingLabel>
         <Row>
@@ -137,12 +139,12 @@ function AjoutForm({
           </Col>
         </Row>
         <Button
-          className="buttonCenter mt-5"
+          className={`buttonCenter mt-5 ${articleName && price && tva ? "" : "disabled"}`}
           onClick={addArticle}
-          variant="secondary"
+          // variant="primary"
           size="lg"
         >
-          Button
+          Enregistrer l'article
         </Button>
       </Form.Group>
     </Form>

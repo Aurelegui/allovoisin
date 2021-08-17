@@ -1,21 +1,33 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
-import Col from "react-bootstrap/Col";
+// import Form from "react-bootstrap/Form";
+// import Col from "react-bootstrap/Col";
+// import Container from "react-bootstrap/Container";
+// import Row from "react-bootstrap/Row";
+import ListGroup from "react-bootstrap/ListGroup";
 
-const Articles = ({}) => {
+const Articles = ({
+  articleName,
+  setArticleName,
+  price,
+  setPrice,
+  tva,
+  setTva,
+  article,
+}) => {
+
+  const deleteHandler = e => {
+
+  }
   return (
-    <div>
-      <Form.Group
-        bg="primary"
-        as={Col}
-        className="mb-3"
-        controlId="formAddArticle"
+    // <Container>
+      <ListGroup.Item
+        action
+        // onClick={}
       >
-        <Col md={7} sm={6} xs={12}>
-            
-        </Col>
-      </Form.Group>
-    </div>
+        {articleName}
+        <i className="bi bi-chevron-right closeButton"></i>
+      </ListGroup.Item>
+    // </Container>
   );
 };
 
