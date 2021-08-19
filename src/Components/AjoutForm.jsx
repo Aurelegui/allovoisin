@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Row from "react-bootstrap/Row";
 import uuid from "react-uuid";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 
 function AjoutForm({
   articleName,
@@ -18,11 +18,13 @@ function AjoutForm({
   setArticles,
   total,
   setTotal,
+  setEdit,
+  setShowAddArticle,
+  responsive,
 }) {
   // Gere state du nom de nouveau article
   const inputNameArticleHandler = (e) => {
     setArticleName(e.target.value);
-    // console.log(articleName);
   };
 
   // gere le prix unitaire HT
@@ -68,11 +70,23 @@ function AjoutForm({
       setTva("");
       setArticleName("");
       setTotal("");
+      setEdit(false);
+      setShowAddArticle(false);
     }
   };
 
   return (
     <Form className="bgColor px-2 pt-1 mb-2 pb-3">
+      {responsive && (
+        <ArrowBackIosIcon
+          className="ml-4 goBack Arrow"
+          id="Arrow"
+          onClick={() => {
+            setEdit(false);
+            setShowAddArticle(false);
+          }}
+        />
+      )}
       <h1 className="pl-1">Ajouter un article</h1>
       <Form.Group
         bg="primary"
@@ -149,7 +163,5 @@ function AjoutForm({
     </Form>
   );
 }
-
-AjoutForm.propTypes = {};
 
 export default AjoutForm;

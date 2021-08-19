@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Row from "react-bootstrap/Row";
 import DeleteOutlineOutlinedIcon from "@material-ui/icons/DeleteOutlineOutlined";
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 function Edit({
   articleName,
@@ -26,7 +26,6 @@ function Edit({
     setEdit(false);
   };
 
-  // console.log(article);
   const inputNameArticleHandler = (e) => {
     setArticleName(e.target.value);
   };
@@ -57,7 +56,6 @@ function Edit({
   }
 
   const editArticle = (e) => {
-    console.log(article);
     e.preventDefault();
     setArticles(
       articles.map((el) => {
@@ -79,7 +77,6 @@ function Edit({
             };
           }
         }
-        console.log(el);
         return el;
       })
     );
@@ -92,6 +89,10 @@ function Edit({
   };
   return (
     <Form className="bgColor px-2 pt-1 mb-2 pb-3">
+      <ArrowBackIosIcon
+          onClick={()=>{setEdit(false)}}
+          className="ml-4 goBack"
+        />
       <h1 className="pt-2">
         Éditer un article
         <DeleteOutlineOutlinedIcon
@@ -170,7 +171,5 @@ function Edit({
     </Form>
   );
 }
-
-Edit.propTypes = {};
 
 export default Edit;

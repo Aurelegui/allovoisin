@@ -51,7 +51,6 @@ function App() {
       setResponsive(false);
     }
   }, [windowSize]);
-  console.log(responsive);
 
   const mobileView = (
     <Row className="mt-3">
@@ -99,6 +98,9 @@ function App() {
             total={total}
             setTotal={setTotal}
             responsive={responsive}
+            setShowAddArticle={setShowAddArticle}
+            setEdit={setEdit}
+            edit={edit}
           />
         )}
       </Col>
@@ -151,6 +153,9 @@ function App() {
             total={total}
             setTotal={setTotal}
             responsive={responsive}
+            setShowAddArticle={setShowAddArticle}
+            setEdit={setEdit}
+            edit={edit}
           />
         )}
       </Col>

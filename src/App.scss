@@ -117,3 +117,13 @@ label {
 .editTitle {
   display: inline-block;
 }
+
+.goBack {
+  float: left;
+}
+
+@media screen and (max-width: 575px) {
+  #Arrow {
+    display: hidden;
+  }
+}

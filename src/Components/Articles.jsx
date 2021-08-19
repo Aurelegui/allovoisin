@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import ListGroup from "react-bootstrap/ListGroup";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
@@ -18,7 +17,5 @@ function Articles({ articleName, setArticle, setEdit, article }) {
     // </Container>
   );
 }
-
-Articles.propTypes = {};
 
 export default Articles;
