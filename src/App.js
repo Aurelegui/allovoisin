@@ -24,20 +24,12 @@ function App() {
           <Row className="mt-3">
             <Col md={7} sm={6} xs={12}>
               <ArticlesList
-                articleName={articleName}
                 setArticleName={setArticleName}
-                price={price}
                 setPrice={setPrice}
-                tva={tva}
                 setTva={setTva}
                 articles={articles}
-                setArticles={setArticles}
-                total={total}
-                setTotal={setTotal}
                 setEdit={setEdit}
-                edit={edit}
                 setArticle={setArticle}
-                article={article}
               />
             </Col>
             <Col md={5} sm={6} xs={12} className="bgColor m-auto">
@@ -54,7 +46,6 @@ function App() {
               setTotal={setTotal}
               setEdit={setEdit}
               article={article}
-              setArticle={setArticle}
               /> : 
               <AjoutForm
               className="bgColor"

@@ -1,12 +1,10 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-// import Articles from "./Articles";
 import uuid from "react-uuid";
 
 function AjoutForm({
@@ -20,7 +18,6 @@ function AjoutForm({
   setArticles,
   total,
   setTotal,
-  article,
 }) {
   // Gere state du nom de nouveau article
   const inputNameArticleHandler = (e) => {
@@ -75,7 +72,7 @@ function AjoutForm({
   };
 
   return (
-    <Form className="pt-3 pb-3">
+    <Form className="bgColor pt-3 pb-3">
       <h1 className="pl-1">Ajouter un article</h1>
       <Form.Group
         bg="primary"
@@ -88,7 +85,7 @@ function AjoutForm({
           placeholder="Nom de l'article"
           label="Nom de l'article"
           className="mb-3"
-          >
+        >
           {/* Nom de l'article */}
           <Form.Control
             onChange={inputNameArticleHandler}
@@ -120,7 +117,7 @@ function AjoutForm({
           placeholder="TVA en %"
           label="TVA en %"
           className="mb-3"
-          >
+        >
           {/* TVA en % */}
           <Form.Control
             onChange={inputTvaHandler}
