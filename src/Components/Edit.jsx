@@ -87,7 +87,7 @@ function Edit({
     alert("article mis a jour");
   };
   return (
-    <Form>
+    <Form className="pt-3 pb-3">
       <h1>Éditer un article</h1>
       <Form.Group
         bg="primary"

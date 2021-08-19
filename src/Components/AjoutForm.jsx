@@ -75,8 +75,8 @@ function AjoutForm({
   };
 
   return (
-    <Form className="py-3">
-      <h1>Ajouter un article</h1>
+    <Form className="pt-3 pb-3">
+      <h1 className="pl-1">Ajouter un article</h1>
       <Form.Group
         bg="primary"
         as={Col}

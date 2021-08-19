@@ -19,9 +19,9 @@ function ArticlesList({
   setArticle,
 }) {
   return (
-    <div>
-      <Container className="bgColor py-3">
-        <h1>Mes articles</h1>
+    <div className="bgColor pt-1">
+      {/* <Container className="bgColor pt-3 pb-0"> */}
+        <h1 className="p-2">Mes articles</h1>
         <ListGroup variant="flush">
           {articles.map((article) => (
             <Articles
@@ -39,7 +39,7 @@ function ArticlesList({
             />
           ))}
         </ListGroup>
-      </Container>
+      {/* </Container> */}
     </div>
   );
 }

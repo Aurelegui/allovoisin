@@ -97,3 +97,19 @@ label {
 #floatingInput.form-control::placeholder:focus {
   color: white;
 }
+
+.list-group-item {
+  padding: 1.0rem 0rem;
+}
+
+.list-group-item {
+  padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+.list-group-item:first-child {
+  padding-top: 15px;
+}
+
+.list-group-flush > .list-group-item:last-child {
+  border-radius: 7px;
+}
