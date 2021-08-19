@@ -144,7 +144,6 @@ function AjoutForm({
             articleName && price && tva ? "" : "disabled"
           }`}
           onClick={addArticle}
-          // variant="primary"
           size="lg"
         >
           Enregistrer l'article

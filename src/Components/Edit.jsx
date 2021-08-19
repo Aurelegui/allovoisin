@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Row from "react-bootstrap/Row";
+import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined';
 // import Articles from "./Articles";
 
 function Edit({
@@ -22,6 +23,12 @@ function Edit({
   article,
   setArticle,
 }) {
+
+  const deleteArticleHandler = () => {
+    setArticles(articles.filter((el) => el.id !== article.id));
+    setEdit(false);
+  };
+
   // console.log(article);
   const inputNameArticleHandler = (e) => {
     setArticleName(e.target.value);
@@ -88,7 +95,7 @@ function Edit({
   };
   return (
     <Form className="pt-3 pb-3">
-      <h1>Éditer un article</h1>
+      <h1>Éditer un article<DeleteOutlineOutlinedIcon onClick={deleteArticleHandler} className="ml-4 closeButton"/></h1>
       <Form.Group
         bg="primary"
         as={Col}
