@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ListGroup from "react-bootstrap/ListGroup";
+import Button from "react-bootstrap/Button";
 import Articles from "./Articles";
 
 function ArticlesList({
@@ -10,6 +11,8 @@ function ArticlesList({
   articles,
   setEdit,
   setArticle,
+  setShowAddArticle,
+  responsive,
 }) {
   return (
     <div className="bgColor pt-1 mb-2">
@@ -31,6 +34,19 @@ function ArticlesList({
             setArticle={setArticle}
           />
         ))}
+        {responsive && (
+          <div className="pb-5">
+            <Button
+              className={`buttonCenter mt-5`}
+              onClick={() => {
+                setShowAddArticle(true);
+              }}
+              size="lg"
+            >
+              Ajouter un Article
+            </Button>
+          </div>
+        )}
       </ListGroup>
     </div>
   );

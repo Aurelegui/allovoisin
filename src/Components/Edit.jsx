@@ -91,8 +91,8 @@ function Edit({
     alert("article mis a jour");
   };
   return (
-    <Form className="pt-3 pb-3">
-      <h1>
+    <Form className="bgColor px-2 pt-1 mb-2 pb-3">
+      <h1 className="pt-2">
         Éditer un article
         <DeleteOutlineOutlinedIcon
           onClick={deleteArticleHandler}

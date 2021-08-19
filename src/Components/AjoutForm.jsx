@@ -72,7 +72,7 @@ function AjoutForm({
   };
 
   return (
-    <Form className="bgColor pt-3 pb-3">
+    <Form className="bgColor px-2 pt-1 mb-2 pb-3">
       <h1 className="pl-1">Ajouter un article</h1>
       <Form.Group
         bg="primary"
